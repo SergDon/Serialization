@@ -50,13 +50,13 @@ public class Main {
                     shoppingCart.addToCart(selectedItem - 1, itemCount);
                     shoppingCart.saveBin(basketFile);
                 } catch (NumberFormatException nfe) {
-                    // Во вводе что-то отличное от двух целых чисел
+
                     System.out.println("\nПожалуйста! Нужно для работы только 2 аргумента - 2 целых числа через пробел!\"");
                 } catch (FileNotFoundException e) {
                     throw new RuntimeException(e);
                 }
             } else if (s.equals("end")) {
-                break;  // Game Over
+                break;
             }
             System.out.println("\nВнимание! Нужно для работы только 2 аргумента через пробел");
         }
