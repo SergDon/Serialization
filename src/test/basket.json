@@ -1,0 +1,35 @@
+{
+  "goods": [
+    {
+      "name": "Кокос",
+      "price": 220.0,
+      "inBasket": 2
+    },
+    {
+      "name": "Рис",
+      "price": 55.0,
+      "inBasket": 3
+    },
+    {
+      "name": "Сахар",
+      "price": 61.0,
+      "inBasket": 0
+    },
+    {
+      "name": "Кефир",
+      "price": 82.0,
+      "inBasket": 0
+    },
+    {
+      "name": "Чай",
+      "price": 150.0,
+      "inBasket": 0
+    },
+    {
+      "name": "Колбасный сыр",
+      "price": 240.0,
+      "inBasket": 0
+    }
+  ],
+  "totalValue": 605.0
+}
