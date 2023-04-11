@@ -38,7 +38,6 @@ public class Main {
         } else {
             shoppingCart = new Basket(goods);
         }
-
         while (true) {
             shoppingCart.printGoodsList();
             s = scanner.nextLine();

@@ -4,7 +4,6 @@
         <fileName>basket.json</fileName>
         <format>json</format>
     </load>
-
     <save>
         <enabled>true</enabled>
         <fileName>basket.json</fileName>
