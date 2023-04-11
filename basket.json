@@ -8,17 +8,17 @@
     {
       "name": "Рис",
       "price": 55.0,
-      "inBasket": 7
+      "inBasket": 9
     },
     {
       "name": "Сахар",
       "price": 61.0,
-      "inBasket": 12
+      "inBasket": 15
     },
     {
       "name": "Кефир",
       "price": 82.0,
-      "inBasket": 5
+      "inBasket": 9
     },
     {
       "name": "Чай",
@@ -31,5 +31,5 @@
       "inBasket": 0
     }
   ],
-  "totalValue": 10927.0
+  "totalValue": 11548.0
 }

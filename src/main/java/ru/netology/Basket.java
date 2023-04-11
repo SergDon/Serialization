@@ -83,6 +83,7 @@ public class Basket {
             goods.add(new Product(name, price, inBasket));
         }
 
+
         return new Basket(goods.toArray(Product[]::new));
     }
 
