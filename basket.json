@@ -3,7 +3,7 @@
     {
       "name": "Кокос",
       "price": 220.0,
-      "inBasket": 40
+      "inBasket": 2162
     },
     {
       "name": "Рис",
@@ -31,5 +31,5 @@
       "inBasket": 0
     }
   ],
-  "totalValue": 11548.0
+  "totalValue": 478388.0
 }

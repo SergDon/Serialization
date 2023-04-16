@@ -27,7 +27,6 @@ public class Main {
         var logFile = new File("log.csv");
         var clientLog = new ClientLog();
 
-
         if (jsonFile.exists()) {
             System.out.println("Добро пожаловать!");
             System.out.println("Желаете загрузить корзину покупок?  - нажмите <ENTER> ");
