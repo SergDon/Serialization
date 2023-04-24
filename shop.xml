@@ -8,7 +8,6 @@
         <enabled>true</enabled>
         <fileName>basket.json</fileName>
         <format>json</format>
-
     </save>
     <log>
         <enabled>true</enabled>

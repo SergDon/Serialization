@@ -21,12 +21,10 @@ public class Main {
         Basket shoppingCart;
         int selectedItem;
         int itemCount;
-
         var basketFile = new File("basket.txt");
         var jsonFile = new File("basket.json");
         var logFile = new File("log.csv");
         var clientLog = new ClientLog();
-
         if (jsonFile.exists()) {
             System.out.println("Добро пожаловать!");
             System.out.println("Желаете загрузить корзину покупок?  - нажмите <ENTER> ");

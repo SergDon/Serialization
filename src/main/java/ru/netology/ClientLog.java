@@ -3,7 +3,6 @@ package ru.netology;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 public class ClientLog {
     private String log = "productNum,amount\n";
 
