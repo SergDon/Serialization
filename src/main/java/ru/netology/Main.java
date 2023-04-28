@@ -1,5 +1,7 @@
 package ru.netology;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -24,6 +26,7 @@ public class Main {
         var basketFile = new File("basket.txt");
         var jsonFile = new File("basket.json");
         var logFile = new File("log.csv");
+        logFile = new File("client.csv");
         var clientLog = new ClientLog();
         if (jsonFile.exists()) {
             System.out.println("Добро пожаловать!");
@@ -36,6 +39,7 @@ public class Main {
         } else {
             shoppingCart = new Basket(goods);
         }
+
         while (true) {
             shoppingCart.printGoodsList();
             s = scanner.nextLine();
@@ -69,5 +73,21 @@ public class Main {
         clientLog.exportAsCSV(logFile);
         scanner.close();
         shoppingCart.printCart();
+    }
+    public class XmlParser {
+        public XmlParser(File configFile) {
+        }
+
+        public boolean isLoadEnabled() {
+            return false;
+        }
+
+        public String getLoadFileName() {
+            return null;
+        }
+
+        public String getLoadFormat() {
+            return null;
+        }
     }
 }
