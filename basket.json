@@ -3,22 +3,22 @@
     {
       "name": "Кокос",
       "price": 220.0,
-      "inBasket": 5
+      "inBasket": 1
     },
     {
       "name": "Рис",
       "price": 55.0,
-      "inBasket": 12
+      "inBasket": 2
     },
     {
       "name": "Сахар",
       "price": 61.0,
-      "inBasket": 21
+      "inBasket": 3
     },
     {
       "name": "Кефир",
       "price": 82.0,
-      "inBasket": 4
+      "inBasket": 0
     },
     {
       "name": "Чай",
@@ -28,8 +28,8 @@
     {
       "name": "Колбасный сыр",
       "price": 240.0,
-      "inBasket": 6
+      "inBasket": 0
     }
   ],
-  "totalValue": 4809.0
+  "totalValue": 513.0
 }

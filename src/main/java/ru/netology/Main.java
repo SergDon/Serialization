@@ -1,7 +1,5 @@
 package ru.netology;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,7 +15,7 @@ public class Main {
             new Product("Колбасный сыр", 240.0)
     };
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, FileNotFoundException {
         Scanner scanner = new Scanner(System.in);
         String s;
         Basket shoppingCart;
@@ -25,14 +23,33 @@ public class Main {
         int itemCount;
         var basketFile = new File("basket.txt");
         var jsonFile = new File("basket.json");
-        var logFile = new File("log.csv");
+        var logFile = new File("client.csv");
         logFile = new File("client.csv");
         var clientLog = new ClientLog();
-        if (jsonFile.exists()) {
-            System.out.println("Добро пожаловать!");
-            System.out.println("Желаете загрузить корзину покупок?  - нажмите <ENTER> ");
-            if (scanner.nextLine().equals("")) {
-                shoppingCart = Basket.loadFromJSON(jsonFile);
+
+
+        // загрузка информации из файла shop.xml
+        File configFile = new File("shop.xml");
+        if (configFile.exists()) {
+            XmlParser xmlParser = new XmlParser(configFile);
+            if (xmlParser.isLoadEnabled()) {
+                String fileName = xmlParser.getLoadFileName();
+                String format = String.valueOf(xmlParser.getLoadFormat());
+                if (format.equals("json")) {
+                    if (format.equals("json")) {
+                    }
+                    File loadFile = new File(fileName);
+                    if (loadFile.exists()) {
+                        shoppingCart = Basket.loadFromJSON(new File("basket.jason"));
+                        System.out.println("Корзина успешно загружена из файла " + fileName);
+                    } else {
+                        System.out.println("Ошибка загрузки корзины. Файл " + fileName + " не найден.");
+                        shoppingCart = new Basket(goods);
+                    }
+                } else {
+                    System.out.println("Ошибка загрузки корзины. Неподдерживаемый формат файла " + format);
+                    shoppingCart = new Basket(goods);
+                }
             } else {
                 shoppingCart = new Basket(goods);
             }
@@ -65,29 +82,29 @@ public class Main {
                 } catch (FileNotFoundException e) {
                     throw new RuntimeException(e);
                 }
-            } else if (s.equals("end")) {
-                break;
-            }
+            } else if (s.equals("end")) break;
             System.out.println("\nВнимание! Нужно для работы только 2 аргумента через пробел");
         }
         clientLog.exportAsCSV(logFile);
         scanner.close();
         shoppingCart.printCart();
     }
-    public class XmlParser {
+
+    public static class XmlParser {
         public XmlParser(File configFile) {
         }
 
         public boolean isLoadEnabled() {
-            return false;
+            return true;
         }
 
         public String getLoadFileName() {
-            return null;
+            return "basket.jason";
         }
 
-        public String getLoadFormat() {
-            return null;
+        public Object getLoadFormat() {
+
+            return "jason";
         }
     }
 }
